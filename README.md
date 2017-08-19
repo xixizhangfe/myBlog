@@ -1,2 +1,2 @@
 # myBlog
-SPA blog
+SPA blog 单页应用
