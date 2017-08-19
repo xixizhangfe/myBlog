@@ -1,2 +1,2 @@
 # myBlog
-personal blog
+SPA blog
