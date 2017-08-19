@@ -1,0 +1,15 @@
+<script type="text/javascript">
+  $.ajax({
+    type:'get',
+    url:'programmer-style-xiuzhen-src.html',
+    async:true,
+    success:function(data){
+      if(data){
+        $('.main').html(data);
+        document.title="程序员的修真小说";
+      }else{
+        console.log('nothing');
+      }
+    }
+  })
+</script>

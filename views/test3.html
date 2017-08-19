@@ -1,0 +1,24 @@
+<h2>标题</h2>
+<div id="content">
+    文章内容
+</div>
+<script type="text/javascript">
+  $.ajax({
+    type:'get',
+    url:'test.json',
+    dataType: 'json',
+    async:true,
+    success:function(data){
+      if(data){
+        console.log(data);
+        $('main h2').html(data.title);
+        $('#content').html(data.content);
+        document.title=data.title;
+        // console.log(document.title);
+      }else{
+        console.log('nothing');
+      }
+      
+    }
+  })
+</script>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style type="text/css">
+    html,body{
+      height: 100%;
+      width: 100%;
+      overflow-x: hidden;
+      position: absolute;
+      margin: 0;
+    }
+    .pages{
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    .page{
+      background: #fff;
+      height: 100%;
+      font-size: 30px;
+      float: left;
+    }
+    #div1{
+      background: red;
+    }
+    #div2{
+      background: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="pages">
+    <div class="page" id="div1">
+      我是页面1
+      <button id="btn1">跳转到页面2</button>
+    </div>
+    <div class="page" id="div2">
+      我是页面2
+      <button id="btn2">返回页面1</button>
+    </div>
+  </div>
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      var pageWidth=$(window).width();
+      $('.page').width(pageWidth);
+      $('.pages').width(pageWidth*($('.page').length));
+      // $('.pages').css({'left':-pageWidth});
+      $('#btn1').on('click',function(){
+        history.pushState('div2','','页面2');
+        $('.pages').stop().animate({'left':-pageWidth});
+      })
+      $('#btn2').on('click',function(){
+        $('.pages').stop().animate({'left':0});
+        history.back();
+      });
+      window.onpopstate=function(e){
+        console.log(e.state);
+        if(!e.state){
+          $('.pages').stop().animate({'left':0});
+        }else if(e.state==='div2'){
+          $('.pages').stop().animate({'left':-pageWidth});
+        }
+      };
+    });
+  </script>
+</body>
+</html>

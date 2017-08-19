@@ -1,0 +1,325 @@
+*{
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+body{
+  font-family: calibri, 宋体, Arial, sans-serif;
+  background: rgba(0,0,0,0.1);
+}
+
+/*
+头部图片应该是作为背景的
+ */
+.main-header{
+  // position: relative;
+  padding: 12px;
+  background: url(../images/cat.jpg) no-repeat center;
+  text-align: center; /*设置其inline-block的子元素居中*/
+}
+
+#header-wrapper{
+  margin: auto;
+  width: 960px;
+  position: relative;
+}
+/*
+ 头像居中的方式
+ 方法一：绝对定位于父元素，利用负margin
+ 方法二：flex布局
+ 方法三：绝对定位于父元素，利用left,right,top,bottom都为0形成一个新的区域，再通过margin:0 auto使其左右居中。
+*/
+/*
+块级元素如div居中方式，可以设置其宽度后，使用margin:auto.
+ */
+/*
+还可以设置一个元素为inline-block，在其父元素设置text-align:center;
+ */
+.logo{
+  width: 120px;/*必须设置*/
+  margin: auto;
+}
+.avatar{
+  margin-top: 12px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+/*导航栏,搜索框居中*/
+.main-nav{
+  display: inline-block;/*必须设置,配合父元素设置的text-align:center*/
+  margin: 6px auto;
+}
+
+/*去除列表默认样式*/
+ul{
+  list-style: none;
+}
+li{
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.nav-tab{
+  text-decoration: none;
+  line-height: 48px;
+  padding: 0 8px;
+  font-size: 12px;
+  color: #d8d8d8;
+}
+
+.searchBox{
+  margin-bottom: 12px;
+}
+/*这里input居中，也是因为main-header设置了text-align:center*/
+.searchBox input{
+  width: 40px;
+  height: 20px;
+  background: transparent;
+  outline: none;
+  border-left: 2px solid rgb(223,132,108);
+  color: rgb(153,153,153);
+}
+
+/*设置一个背景，但是现在不好使*/
+.topfixed_bg {
+  background-image: url(data:images/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUAAAAADCAYAAADiK9bcAAAABmJL…RYdFNvZnR3YXJlAAB42nNMyU9KVXDLLEotzy/KLlZwDjYDAEQVBqRE4qZiAAAAAElFTkSuQmCC);
+  background-repeat: repeat-x;
+  background-position: 0 bottom;
+  height: 10px; 
+  width: 100%;
+  margin-top: -10px;
+}
+
+.main{
+  margin: auto;
+  //width: 960px;
+  color: #999;
+}
+
+.article-list{
+  width: 100%;
+  margin: auto;
+}
+
+
+.post{
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  background: #fff;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+}
+.post-header{
+  position: relative;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 2em;
+  color: #6d6d6d;
+  margin-bottom: 12px;
+  // overflow: hidden;
+}
+/*让发布时间绝对定位，脱离文档流，然后让题目显示成块级，并设置padding给发布时间留出位置*/
+/*难点是：如果题目过长怎么显示一部分;方案是：设置固定高度+overflow:hidden*/
+.post-title{
+  display: block;
+  text-decoration: none;
+  padding-right: 68px;
+  height: 2em; /*限制高度*/
+  overflow: hidden;
+  // white-space: nowrap;
+  color: #777;
+}
+.post-time{
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: rgba(0,0,0,0.1);
+}
+.post-img{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/*多行文字溢出显示省略号，只在webkit内核才行，其他的需要通过JS实现*/
+.post-digest{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  margin-bottom: 20px;
+  font-size: 12px;
+  line-height: 2em;
+}
+.footer{
+  background: url(../images/flight.jpg) no-repeat -26px 35%;
+  background-size: cover;
+}
+.content-wrapper{
+  width: 900px;
+  margin: auto;
+  font-size: 0;
+  color: #999;
+}
+/*让三个块并列一行，可以用inline-block，也可以用float-left;
+但是inline-block会宽度不够用，float-left没问题，这是为什么呢？
+inline-block元素之间会有间距(可以再父元素中设置font-size:0)，而float-left没有
+*/
+.widget-wrapper{
+  float: left;
+  /*display: inline-block;*/
+  width: 240px;
+  padding: 0 30px 20px 30px;
+  vertical-align: top;
+}
+.widget-title{
+  margin: 30px 0 12px;
+  font-size: 16px;
+  text-align: center;
+}
+.comment-list{
+  display: block;
+  padding: 7px;
+  font-size: 12px;
+  line-height: 28px;/*设置行高与高度一致，能够让文字自动居中*/
+  position: relative;
+  color: #666;
+}
+.comment-avatar{
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  margin-right: 4px;
+  opacity: 0.8;
+  vertical-align: bottom;
+}
+
+.tag-list{
+  display: block;
+  font-size: 12px;
+  color: #666;
+}
+.message-list{
+  margin: 4px;
+  border:1px solid rgba(255,255,255,0.1);
+}
+.message-avatar{
+  width: 46px;
+  height: 46px;
+  padding: 12px;
+  border-radius: 50%;
+  opacity: 0.6
+}
+
+.footer-copy{
+  border-top: 1px solid rgba(255,255,255,0.1);
+  color: #666;
+  text-align: center;
+  clear: both;/*清除浮动*/
+}
+.social-icons{
+  line-height: 40px;
+}
+.social-icon{
+  text-decoration: none;
+  margin-right: 10px;
+  color: #666;
+}
+.authority{
+  display: inline-block;
+  margin: 12px 0;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 926px){
+  #header-wrapper{
+    width: 960px;
+  }
+
+  .main{
+    width: 960px;
+  }
+
+  .post{
+    width: 304px;
+    /*height: 367px;*/
+    margin: 6px;
+    padding: 24px;
+  }
+}
+
+@media screen and (min-width: 618px) and (max-width: 926px){
+  #header-wrapper{
+    width: 100%;
+  }
+  .main{
+    width: 100%;
+  }
+  .post{
+    width: 45%;
+    /*height: 430px;*/
+    margin: 2%;
+    padding: 24px;
+  }
+}
+
+@media screen and (max-width: 618px){
+  #header-wrapper{
+    width: 100%;
+  }
+  .main{
+    width: 100%;
+  }
+  .post{
+    width: 95%;
+    /*height: 430px;*/
+    margin: 2%;
+    padding: 24px;
+  }
+}
+
+@media screen and (min-width: 740px) and (max-width: 900px){
+  .content-wrapper{
+    width: 100%;
+    margin: 
+  }
+  .widget-wrapper{
+    padding: 0 0 20px 0;
+  }
+}
+@media screen and (max-width: 740px){
+  .content-wrapper{
+    width: 100%;
+  }
+  .widget-wrapper{
+    /*display: block;*/
+    padding: 0 30% 20px 30%;
+  }
+}
+
+.active{
+  color: #df846c;
+}
+
+.open{
+  width: 52px;
+  display: inline-block;
+  color: #d8d8d8;
+  background: transparent;
+  display: none;
+  vertical-align: top;
+  padding-top: 15px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  outline: none;
+}
+.open span{
+  display: block;
+  background: #d8d8d8;
+  height: 3px;
+  width: 52%;
+  margin: 4px auto 4px;
+}
