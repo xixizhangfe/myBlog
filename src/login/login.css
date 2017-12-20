@@ -1,0 +1,22 @@
+.login{
+  background: url(//cn.bing.com/az/hprichbg/rb/ChamonixClouds_ZH-CN7700889231_1366x768.jpg) no-repeat;
+  background-size: 100% auto;
+  background-attachment: fixed;
+}
+.login .container{
+  margin-top: 100px;
+}
+.login .avatar{
+  display: block;
+  margin: 20px auto;
+  width: 80px;
+  height: 80px;
+  background: url(//o0xihan9v.qnssl.com/wp-content/uploads/2015/10/B803AF6149329495C77544BD9DB873BC.jpg) no-repeat;
+  background-size: 100% auto;
+}
+.login form{
+
+  padding: 26px 24px 46px;
+  // border: 1px solid red;
+  background-color: rgba(251,251,251,0.3);
+}

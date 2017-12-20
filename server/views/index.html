@@ -2,17 +2,18 @@
 <html>
 <head>
   <title>首页</title>
-  <link rel="stylesheet" type="text/css" href="../public/css/index.css">
+  <!-- <link rel="stylesheet" type="text/css" href="../public/css/index.css"> -->
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
+  <!-- 开发模式才会有 -->
+  <!-- <link rel="stylesheet" type="text/css" href="../../public/css/main.css"> -->
 </head>
 <body>
   <header class="main-header">
     <div id="header-wrapper">
       <div class="logo">
-        <img class="avatar" src="../public/images/avatar.jpg"/>
+        <img class="avatar" src="../../src/index/images/avatar.jpg"/>
       </div>
-      <button id="playlist" class="open">
+      <button id="playlist" class="z-open">
         <span></span>
         <span></span>
         <span></span>
@@ -22,7 +23,17 @@
         <ul>
           <li><a class="nav-tab active" href="/">首页</a></li>
           <li><a data-pjax class="nav-tab" href="/about.html">关於</a></li>
-          <li><a class="nav-tab" href="">青春代碼</a></li>
+          <li id="youthcode">
+            <a class="nav-tab" href="">青春代碼</a>
+            <ul class="subnav">
+              <li><a href="">笔记</a></li>
+              <li><a href="">折腾</a></li>
+              <li><a href="">工作</a></li>
+              <li><a href="">作品</a></li>
+              <li><a href="">书签</a></li>
+              <li><a href="">代码高亮</a></li>
+            </ul>
+          </li>
           <li><a class="nav-tab" href="">洒家茶話</a></li>
           <li><a class="nav-tab" href="">文艺少年</a></li>
           <li><a class="nav-tab" href="">归档</a></li>
@@ -41,7 +52,7 @@
         <h1 class="post-header"><a data-pjax class="post-title" href="/programmer-style-xiuzhen.html">程序猿风格的修真小说</a><span class="post-time">08月11日</span></h1>
         <p>
           <a data-pjax href="/programmer-style-xiuzhen.html" title="程序猿风格的修真小说">
-            <img class="post-img" src="../public/images/article1.jpg">
+            <img class="post-img" src="../../src/index/images/article1.jpg">
           </a>
         </p>
         <p class="post-digest">
@@ -52,7 +63,7 @@
         <h1 class="post-header"><a class="post-title" href="">使用rem等比适配webApp</a><span class="post-time">08月11日</span></h1>
         <p>
           <a href="" title="使用rem等比适配webApp">
-            <img class="post-img" src="../public/images/article2.jpg">
+            <img class="post-img" src="../../src/index/images/article2.jpg">
           </a>
         </p>
         <p class="post-digest">
@@ -63,7 +74,7 @@
         <h1 class="post-header"><a class="post-title" href="">解决Wordpress在阿里云主机无法发送邮件的问题</a><span class="post-time">08月11日</span></h1>
         <p>
           <a href="" title="使用rem等比适配webApp">
-            <img class="post-img" src="../public/images/article3.jpg">
+            <img class="post-img" src="../../src/index/images/article3.jpg">
           </a>
         </p>
         <p class="post-digest">
@@ -74,7 +85,7 @@
         <h1 class="post-header"><a class="post-title" href="">最近比较忙，最近比较烦。</a><span class="post-time">08月11日</span></h1>
         <p>
           <a href="" title="最近比较忙，最近比较烦。">
-            <img class="post-img" src="../public/images/article4.jpg">
+            <img class="post-img" src="../../src/index/images/article4.jpg">
           </a>
         </p>
         <p class="post-digest">
@@ -89,7 +100,7 @@
         <h1 class="post-header"><a class="post-title" href="">喵星人咖啡馆</a><span class="post-time">08月11日</span></h1>
         <p>
           <a href="" title="喵星人咖啡馆">
-            <img class="post-img" src="../public/images/article5.jpg">
+            <img class="post-img" src="../../src/index/images/article5.jpg">
           </a>
         </p>
         <p class="post-digest">
@@ -100,7 +111,7 @@
         <h1 class="post-header"><a class="post-title" href="">心有猛虎,細嗅蔷薇:–《超能陸戰隊》影評</a><span class="post-time">08月11日</span></h1>
         <p>
           <a href="" title="心有猛虎,細嗅蔷薇:–《超能陸戰隊》影評">
-            <img class="post-img" src="../public/images/article6.jpg">
+            <img class="post-img" src="../../src/index/images/article6.jpg">
           </a>
         </p>
         <p class="post-digest">
@@ -112,7 +123,7 @@
         <h1 class="post-header"><a class="post-title" href="">使用rem等比适配webApp</a><span class="post-time">08月11日</span></h1>
         <p>
           <a href="" title="使用rem等比适配webApp">
-            <img class="post-img" src="../public/images/article2.jpg">
+            <img class="post-img" src="../../src/index/images/article2.jpg">
           </a>
         </p>
         <p class="post-digest">
@@ -127,19 +138,19 @@
         <h1 class="widget-title">最新评论</h1>
         <ul>
           <li class="comment-list">
-            <img class="comment-avatar" src="../public/images/noAvatar.jpg">
+            <img class="comment-avatar" src="../../src/index/images/noAvatar.jpg">
             <span class="comment-text">感受学习的力量！</span>
           </li>
           <li class="comment-list">
-            <img class="comment-avatar" src="../public/images/noAvatar.jpg">
+            <img class="comment-avatar" src="../../src/index/images/noAvatar.jpg">
             <span class="comment-text">来看看总能学到一点东西！</span>
           </li>
           <li class="comment-list">
-            <img class="comment-avatar" src="../public/images/noAvatar.jpg">
+            <img class="comment-avatar" src="../../src/index/images/noAvatar.jpg">
             <span class="comment-text">这个不错哦，我好好读读！</span>
           </li>
           <li class="comment-list">
-            <img class="comment-avatar" src="../public/images/noAvatar.jpg">
+            <img class="comment-avatar" src="../../src/index/images/noAvatar.jpg">
             <span class="comment-text">好几年没用博客了，支持下！</span>
           </li>
         </ul>
@@ -154,22 +165,22 @@
         <h1 class="widget-title">留言墙</h1>
         <ul>
           <li class="message-list">
-            <img class="message-avatar" src="../public/images/user-avatar1.jpg">
+            <img class="message-avatar" src="../../src/index/images/user-avatar1.jpg">
           </li>
           <li class="message-list">
-            <img class="message-avatar" src="../public/images/user-avatar2.jpg">
+            <img class="message-avatar" src="../../src/index/images/user-avatar2.jpg">
           </li>
           <li class="message-list">
-            <img class="message-avatar" src="../public/images/user-avatar3.jpg">
+            <img class="message-avatar" src="../../src/index/images/user-avatar3.jpg">
           </li>
           <li class="message-list">
-            <img class="message-avatar" src="../public/images/noAvatar.jpg">
+            <img class="message-avatar" src="../../src/index/images/noAvatar.jpg">
           </li>
           <li class="message-list">
-            <img class="message-avatar" src="../public/images/noAvatar.jpg">
+            <img class="message-avatar" src="../../src/index/images/noAvatar.jpg">
           </li>
           <li class="message-list">
-            <img class="message-avatar" src="../public/images/noAvatar.jpg">
+            <img class="message-avatar" src="../../src/index/images/noAvatar.jpg">
           </li>
         </ul>
       </div>
@@ -191,7 +202,8 @@
     </div>
   </footer>
   <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="../public/js/jquery.pjax.js"></script>
-  <script type="text/javascript" src="../public/js/index.js"></script>
+  <!-- <script src="../../src/common/jquery-3.2.1.min.js"></script> -->
+  <!-- <script type="text/javascript" src="../../src/common/jquery.pjax.js"></script> -->
+  <script type="text/javascript" src="/public/common/main.js"></script>
 </body>
 </html>

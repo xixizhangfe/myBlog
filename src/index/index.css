@@ -1,8 +1,8 @@
-*{
+/* /* *{
   margin: 0;
   border: 0;
   padding: 0;
-}
+} */
 body{
   font-family: calibri, 宋体, Arial, sans-serif;
   background: rgba(0,0,0,0.1);
@@ -12,9 +12,9 @@ body{
 头部图片应该是作为背景的
  */
 .main-header{
-  // position: relative;
+  /*position: relative;*/
   padding: 12px;
-  background: url(../images/cat.jpg) no-repeat center;
+  background: url(./images/cat.jpg) no-repeat center;
   text-align: center; /*设置其inline-block的子元素居中*/
 }
 
@@ -67,6 +67,33 @@ li{
   padding: 0 8px;
   font-size: 12px;
   color: #d8d8d8;
+}
+
+
+.nav-tab:hover{
+  color: #df846c;
+}
+
+#youthcode{
+  position: relative;
+}
+
+.subnav{
+  display: none;
+  position: absolute;
+  background: rgba(0,0,0,0.7);
+  left:-16px;
+}
+.subnav li{
+  display: block;
+  padding: 6px 24px;
+}
+.subnav li a{
+  text-decoration: none;
+  color: #d8d8d8;
+  line-height: 24px;
+  font-size: 12px;
+  display: block;
 }
 
 .searchBox{
@@ -128,7 +155,7 @@ li{
   padding-right: 68px;
   height: 2em; /*限制高度*/
   overflow: hidden;
-  // white-space: nowrap;
+  /*white-space: nowrap;*/
   color: #777;
 }
 .post-time{
@@ -154,7 +181,7 @@ li{
   line-height: 2em;
 }
 .footer{
-  background: url(../images/flight.jpg) no-repeat -26px 35%;
+  background: url(./images/flight.jpg) no-repeat -26px 35%;
   background-size: cover;
 }
 .content-wrapper{
@@ -303,7 +330,7 @@ inline-block元素之间会有间距(可以再父元素中设置font-size:0)，�
   color: #df846c;
 }
 
-.open{
+.z-open{
   width: 52px;
   display: inline-block;
   color: #d8d8d8;
@@ -316,7 +343,7 @@ inline-block元素之间会有间距(可以再父元素中设置font-size:0)，�
   top: 0;
   outline: none;
 }
-.open span{
+.z-open span{
   display: block;
   background: #d8d8d8;
   height: 3px;

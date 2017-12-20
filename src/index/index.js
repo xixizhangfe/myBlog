@@ -1,3 +1,4 @@
+require('./index.css');
 (function() {
   $(function() {
     $('.nav-tab').on('click', function(e) {
@@ -12,6 +13,9 @@
       });
       // $('.main').html('');
     });
+    $('#youthcode').on('mouseover', function() {
+      $('.subnav').css('display', 'block');
+    })
     $(document).pjax('a[data-pjax]', '.main');
 
   })
